@@ -2,7 +2,7 @@
 
 > Predicting global freshwater availability and population-weighted water scarcity risk across river basins using machine learning.
 
-**Status:** 🚧 In Progress
+**Status:** In Progress
 
 ---
 
