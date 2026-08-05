@@ -142,5 +142,5 @@ streamlit run app/streamlit_app.py
 
 ## Author
 
-**Iyada** — Data Science Student  
+**Ishaan Yadav** — Data Science Student at Purdue University
 [GitHub](https://github.com/yourusername)
