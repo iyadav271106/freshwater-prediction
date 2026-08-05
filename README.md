@@ -129,7 +129,7 @@ streamlit run app/streamlit_app.py
 ## Roadmap
 
 - [x] Project scaffold and structure
-- [ ] Data acquisition (GRDC, ERA5, WorldPop, JMP)
+- [x] Data acquisition (GRDC, ERA5, WorldPop, JMP)
 - [ ] Exploratory data analysis
 - [ ] Geospatial population-to-basin join
 - [ ] Feature engineering
