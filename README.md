@@ -1,4 +1,4 @@
-readme = """# Freshwater Stress Predictor
+# Freshwater Stress Predictor
 
 > Predicting global freshwater availability and population-weighted water scarcity risk across river basins using machine learning.
 
@@ -49,30 +49,31 @@ Over 2 billion people currently live in water-stressed regions. As climate chang
 
 ## Project Structure
 
+```
 freshwater-prediction/
 ├── data/
-│ ├── raw/ # Raw downloaded datasets
-│ ├── processed/ # Cleaned and merged tables
-│ ├── hydrology/ # GRDC, GRACE, ERA5 extracts
-│ ├── population/ # WorldPop rasters
-│ └── dependency/ # JMP, AQUASTAT tables
+│   ├── raw/
+│   ├── processed/
+│   ├── hydrology/
+│   ├── population/
+│   └── dependency/
 ├── notebooks/
-│ ├── 01_eda_hydrology.ipynb
-│ ├── 02_eda_population.ipynb
-│ ├── 03_spatial_join_basins.ipynb
-│ ├── 04_feature_engineering.ipynb
-│ └── 05_modeling.ipynb
-├── models/ # Saved trained models
+│   ├── 01_eda_hydrology.ipynb
+│   ├── 02_eda_population.ipynb
+│   ├── 03_spatial_join_basins.ipynb
+│   ├── 04_feature_engineering.ipynb
+│   └── 05_modeling.ipynb
+├── models/
 ├── app/
-│ └── streamlit_app.py # Interactive dashboard
+│   └── streamlit_app.py
 ├── utils/
-│ ├── data_loader.py
-│ ├── spatial_join.py
-│ ├── feature_engineering.py
-│ └── train_models.py
+│   ├── data_loader.py
+│   ├── spatial_join.py
+│   ├── feature_engineering.py
+│   └── train_models.py
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
@@ -82,8 +83,7 @@ freshwater-prediction/
 
 Water Stress = f(supply_variation, population_demand, dependency_ratio)
 
-
-**Falkenmark Water Stress Index (output classification):**
+**Falkenmark Water Stress Index:**
 
 | Per-Capita Water (m3/person/yr) | Classification |
 |---|---|
@@ -93,35 +93,21 @@ Water Stress = f(supply_variation, population_demand, dependency_ratio)
 | < 500 | Absolute Scarcity |
 
 **Models used:**
-- **XGBoost** - tabular regression on lag/climate/demand features to predict next-period discharge
-- **LSTM** - sequence model for longer-horizon time series forecasting per basin
+- **XGBoost** - tabular regression on lag/climate/demand features
+- **LSTM** - sequence model for time series forecasting per basin
 
 ---
 
 ## How to Run Locally
 
-**1. Clone the repo**
-```bash
+1. Clone the repo
 git clone https://github.com/iyadav271106/freshwater-prediction.git
-cd freshwater-prediction
-```
 
-**2. Create and activate a virtual environment**
-```bash
-python -m venv venv
-venv\\Scripts\\activate        # Windows
-source venv/bin/activate     # Mac/Linux
-```
-
-**3. Install dependencies**
-```bash
+2. Install dependencies
 pip install -r requirements.txt
-```
 
-**4. Run the dashboard**
-```bash
+3. Run the dashboard
 streamlit run app/streamlit_app.py
-```
 
 ---
 
@@ -143,9 +129,3 @@ streamlit run app/streamlit_app.py
 
 **Ishaan Yadav** - Data Science Student
 [GitHub](https://github.com/iyadav271106)
-"""
-
-with open('README.md', 'w') as f:
-    f.write(readme)
-
-print("README written.")
