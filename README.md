@@ -115,7 +115,7 @@ streamlit run app/streamlit_app.py
 
 - [x] Project scaffold and structure
 - [x] Data acquisition (GRDC, ERA5, WorldPop, JMP)
-- [ ] Exploratory data analysis
+- [x] Exploratory data analysis
 - [ ] Geospatial population-to-basin join
 - [ ] Feature engineering
 - [ ] XGBoost baseline model
